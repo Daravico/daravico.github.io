@@ -4,9 +4,27 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    
+    <title>Daravico's Portfolio</title>
+    
+    <!-- CSS Details -->
+    <link rel="stylesheet" type="text/css" href="/css/main.css">
+    
+    <!-- JQuery -->
+    <script src="/js/jquery-3.6.3.js"></script>
+
+    <script> 
+        $(function(){
+          $("#includedContent").load("/components/head.html"); 
+        });
+    </script>
+
 </head>
 <body>
-    <h1>Hello there!</h1>
+    <!-- Header/NavBar insertion --> 
+    <div id="includedContent"></div>
+
+    <h1>Hello there!!</h1>
+
 </body>
 </html>
