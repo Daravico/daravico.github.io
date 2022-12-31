@@ -1,17 +1,102 @@
 
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;600&display=swap');
+
 :root{
---background-color: rgb(95, 60, 60);
---text-color: rgb(243, 233, 233);
+
+    /* ========= Colors ========= */
+    --background-color: #7789a3;
+    --text-color: rgb(0, 0, 0);
+    --time-trans: 0.3s;
+
 }
 
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: 'Montserrat', sans-serif;
+    font-size: auto;
 }
 
 body{
     background: var(--background-color);
-    color: var(--text-color);
+    color: var(--text-color); 
+}
+
+h1{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+}
+
+.header{
+    background-color: #243246;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 7.5vh;
+    padding: 1vh 1vw;
+}
+
+.header .navbar{
+    list-style: none;
+}
+
+/* ------------- Navbar list ------------- */
+
+.header .navbar li{
+    display: inline-block;
+    padding: 5vh 2vw;
+    transition: all var(--time-trans);
+}
+
+.header .navbar li:hover{
+    background-color: #7789a3;
+    transform: scale(1.1);
+    color: #3f322b;
+    font-weight: bolder;
+}
+
+/* ------------- Navbar link ------------- */
+
+.header .navbar a{
+    
+    color: antiquewhite;
+    text-decoration: none;
+    
+}
+
+/* ------------- Navbar logo ------------- */
+
+.header .logo{
+    cursor: pointer;
+    transition: all var(--time-trans);
+}
+
+.header .logo img{
+    height: 5vh;
+    width: auto;
+}
+
+.header .logo:hover{
+    background-color: #7789a3;
+    transform: scale(1.1);    
+}
+
+/* ------------- Navbar Button (Contact) ------------- */
+.header .btn button{
+    font-size: 2vh;
+    font-weight: bolder;
+    color: #2f343b;
+    background: #bacce4;
+    border: none;
+    cursor: pointer;
+    border-radius: 1vh;
+    padding: 1vh 1vw;
+    transition: all var(--time-trans);
+}
+
+.header .btn button:hover{
+    transform: scale(1.1);
+    color: #cfc1b9;
+    background: #18212e;
 }
