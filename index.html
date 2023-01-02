@@ -12,16 +12,18 @@
     
     <!-- JQuery -->
     <script src="/js/jquery-3.6.3.js"></script>
-
-    <script> 
-        $(function(){
-          $("#headerSpace").load("/components/head.html"); 
-        });
-    </script>
+    <script src="/js/functions.js"></script>
 
 </head>
 <body>
     <!-- Header/NavBar insertion --> 
     <div id="headerSpace"></div>
+    <div id="showing"></div>
+    <div id="referenceDiv"></div>
 </body>
+
+<script>
+    window.onload = loadElement("home");
+</script>
+
 </html>

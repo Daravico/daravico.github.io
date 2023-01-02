@@ -2,12 +2,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;600&display=swap');
 
 :root{
-
     /* ========= Colors ========= */
     --background-color: #7789a3;
     --text-color: rgb(0, 0, 0);
     --time-trans: 0.3s;
-
 }
 
 *{
@@ -35,6 +33,14 @@ h1{
     align-items: center;
     height: 7.5vh;
     padding: 1vh 1vw;
+
+    /*NOT SELECTABLE*/
+    -webkit-touch-callout: none; 
+    -webkit-user-select: none;
+    -khtml-user-select: none; 
+    -moz-user-select: none; 
+    -ms-user-select: none; 
+    user-select: none;
 }
 
 /* ------------- Navbar logo ------------- */
@@ -45,7 +51,6 @@ h1{
 }
 
 .header .logo{
-    
     cursor: pointer;
     transition: all var(--time-trans);
     margin-right: auto;
@@ -61,30 +66,31 @@ h1{
 /* ------------- Navbar list ------------- */
 .header .navbar{
     list-style: none;
-    order: 2;
+    order: 2;    
 }
 
 .header .navbar li{
+    font-size: 1.5vh;
     display: inline-block;
     padding: 5vh 2vw;
     border-radius: 10vh;
     transition: all var(--time-trans);
+    color: antiquewhite;
 }
 
 .header .navbar li:hover{
     background-color: #7789a3;
-    transform: scale(1.1);
+    font-size: 1.6vh;
+    transform: scale(1.1);  
     color: #3f322b;
     font-weight: bolder;
-    
-    margin: 0 0.5vw;
+    cursor: pointer;
+    margin: 0 .5vw;
 }
 
 /* ------------- Navbar link ------------- */
-
 .header .navbar a{
-    
-    color: antiquewhite;
+    font-size: 10px;
     text-decoration: none;
     margin: 0 1vw;
 }
@@ -96,7 +102,6 @@ h1{
 
 .header .btn button{
     margin-left: auto;
-
     font-size: 2vh;
     font-weight: bolder;
     color: #2f343b;
