@@ -16,23 +16,30 @@ function removeElement(id){
 // ---------------------------
 // *** Element insertion. ***
 // ---------------------------
-function loadElement(section){
-    // Label of the Div where the information is placed.
-    const label = "showing";
-
+function loadElement(section, firstLoad){
     // Deletes previous "showing" information.
-    removeElement("showing");
+    if (!firstLoad){
+        // Gathers the information of the previous Div.
+        previousDiv = document.getElementById("referenceDiv").children[0];
+
+        // Comparing ID.
+        if (previousDiv.id == section){
+            return;
+        }
+
+        // In case the ID is different the function continues.
+        previousDiv.remove();        
+    }
 
     // Creates the Div element.
     const informationDiv = document.createElement("div");
-    informationDiv.id = label;
+    informationDiv.id = section;
     
     // Gathers the required content (AJAX).
     $(function () {
-        $("#"+label).load("/html/" + section + ".html");
+        $("#"+section).load("/html/" + section + ".html");
     });
 
     // Inserts the information before the referenced Div (Empty Div).
-    const currentDiv = document.getElementById("referenceDiv");
-    document.body.insertBefore(informationDiv, currentDiv);
+    $('#referenceDiv').append(informationDiv)
 }

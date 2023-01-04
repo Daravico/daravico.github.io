@@ -8,18 +8,18 @@
 <body>
     <header class="header">
         <div class="logo">
-            <img src="../img/icons/home.png" alt="home">
+            <img src="../img/icons/shome.png" alt="home" onclick="loadElement('home', false)">
         </div>
         <nav>
             <ul class="navbar" id="bar">
-                <li onclick="loadElement('home')">Home</li>
-                <li onclick="loadElement('about')">About</li>
-                <li onclick="loadElement('formation')">Formation</li>
-                <li onclick="loadElement('projects')">Projects</li>
-                <li onclick="loadElement('skills')">Skills</li>
+                <li onclick="loadElement('home', false)">Home</li>
+                <li onclick="loadElement('about', false)">About</li>
+                <li onclick="loadElement('formation', false)">Formation</li>
+                <li onclick="loadElement('projects', false)">Projects</li>
+                <li onclick="loadElement('skills', false)">Skills</li>
             </ul>
         </nav>
-        <a href="/" class="btn"><button>Contact</button></a>
+        <button class="btn" onclick="loadElement('contact', false)">Contact</button>
     </header>
 </body>
     
