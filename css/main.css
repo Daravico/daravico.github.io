@@ -12,8 +12,6 @@
 
     --light-text: antiquewhite;
     --dark-text: #0D2137;
-
-    --text-color: rgb(0, 0, 0);
     
     --time-trans: 0.3s;
     
@@ -27,6 +25,7 @@
     box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
     font-size: auto;
+    color: var(--text-color);
 }
 
 body{
@@ -107,7 +106,8 @@ h1{
 }
 
 /* ------------- Navbar Button (Contact) ------------- */
-.header .btn{
+.header .btn,
+.menu{
     order: 3;
     margin-left: auto;
     font-size: 2vh;
@@ -124,8 +124,72 @@ h1{
     margin-left: 1vw;
 }
 
-.header .btn:hover{
+.header .btn:hover,
+.menu:hover{
     transform: scale(1.1);
     color: var(--dark-text);
     background: var(--light-option);
+}
+
+/* ###################### MOBILE ###################### */
+
+/* Nav */
+.header .overlay{
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    background-color: var(--dark-text);
+    opacity: 98%;
+    overflow: hidden;
+    transition: all var(--time-trans);
+}
+
+.header .overlay .overlay-content{
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.header .overlay button{
+    border-color: transparent;
+    background-color: transparent;
+    font-size: 100%;
+    padding: 2vh;
+    width: 50%;
+    display: block;
+    transition: all var(--time-trans) ease 0s;
+    color: var(--light-text);
+}
+
+.header .overlay .close{
+    font-size: 10vh;
+    position: absolute;
+    right: 1vh;
+    top: 1vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu{
+    display: none;
+}
+
+@media screen and (max-width: 900px){
+    .navbar, .btn{
+        display: none;
+    }
+    .navbar, .li{
+        display: none;
+    }
+
+    .menu{
+        display: inherit
+    }
 }
