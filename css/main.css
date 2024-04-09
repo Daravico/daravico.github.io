@@ -5,13 +5,13 @@
     /* ========= Colors ========= */
 
     --background-color: #E0EAF5;
-    --header-color: #2E77AE;
+    --header-color: #335e17;
     
-    --dark-option: #FF8E2B;
+    --dark-option: #626946;
     --light-option: #E0EAF5;
 
     --light-text: antiquewhite;
-    --dark-text: #0D2137;
+    --dark-text: #3e4207;
     
     --time-trans: 0.3s;
     
@@ -39,7 +39,7 @@ h1{
 }
 
 .header{
-    background: linear-gradient(to bottom, var(--header-color) 95%, transparent);
+    background: linear-gradient(to bottom, var(--header-color) 100%, transparent);
     display: flex;
     justify-content: flex-end;
     align-items: center;
