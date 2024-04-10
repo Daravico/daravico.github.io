@@ -131,6 +131,30 @@ h1{
     background: var(--light-option);
 }
 
+.individual-project
+{
+    width: 100%;
+    overflow: auto;
+    border-radius: 1vh;
+    border: 1px solid gray;
+}
+
+.individual-project div
+{
+    width: 50%;
+    height: 100%;
+    float: left;   
+}
+
+.individual-project-text
+{
+    justify-content: center;
+}
+
+.individual-project-image
+{
+    justify-content: center;
+}
 /* ###################### MOBILE ###################### */
 
 /* Nav */
