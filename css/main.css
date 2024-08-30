@@ -4,14 +4,14 @@
 :root{
     /* ========= Colors ========= */
 
-    --background-color: #E0EAF5;
-    --header-color: #335e17;
+    --background-color: #F6F6F6;
+    --header-color: #73939C;
     
-    --dark-option: #626946;
-    --light-option: #E0EAF5;
+    --dark-option: #535C5F;
+    --light-option: #DDDAD8;
 
-    --light-text: antiquewhite;
-    --dark-text: #3e4207;
+    --light-text: #DDDAD8;
+    --dark-text: #535C5F;
     
     --time-trans: 0.3s;
     
@@ -61,8 +61,6 @@ h1{
     height: 5vh;
     width: auto;
     transition: all var(--time-trans);
-    background: radial-gradient(var(--dark-text), transparent);
-    border-radius: 100%;
 }
 
 .header .logo{
@@ -73,12 +71,8 @@ h1{
 }
 
 .header .logo:hover{
-    transform: scale(var(--scale-variable));    
-}
-
-.header .logo img:hover{
-    background: radial-gradient(var(--light-text), transparent);
-    border-radius: 30%;
+    transform: scale(var(--scale-variable)); 
+    color: #DDDAD8;   
 }
 
 /* ------------- Navbar list ------------- */
@@ -99,7 +93,7 @@ h1{
 }
 
 .header .navbar li:hover{
-    background-color: var(--dark-option);
+    background-color: var(--light-option);
     color: var(--dark-text);    
     transform: scale(1.1);  
     cursor: pointer;
@@ -113,7 +107,7 @@ h1{
     font-size: 2vh;
     font-weight: bolder;
     color: var(--dark-text);
-    background: var(--dark-option);
+    background: var(--light-option);
 
     border: none;
     cursor: pointer;
@@ -127,8 +121,8 @@ h1{
 .header .btn:hover,
 .menu:hover{
     transform: scale(1.1);
-    color: var(--dark-text);
-    background: var(--light-option);
+    color: var(--light-text);
+    background: var(--dark-option);
 }
 
 .individual-project
