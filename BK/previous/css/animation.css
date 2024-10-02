@@ -1,0 +1,13 @@
+@keyframes slideInFromLeft{
+    0% { 
+        transform: translateX(-40%)
+    }
+
+    100%{
+        transform: translateX(0%)
+    }
+}
+
+.content{
+    animation: 0.75s ease-out 0s 1 slideInFromLeft;;
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<link rel="stylesheet" type="text/css" href="/css/main.css">
+
+<body>
+    <header class="header">
+        <div class="logo">
+            <img src="../img/icons/home_minimal.png" alt="home" onclick="loadElement('home', false)">
+        </div>
+        <nav>
+            <ul class="navbar" id="bar">
+                <li onclick="loadElement('home', false)">Home</li>
+                <li onclick="loadElement('about', false)">About</li>
+                <li onclick="loadElement('projects', false)">Projects</li>
+                <li onclick="loadElement('skills', false)">Skills</li>
+            </ul>
+        </nav>
+
+        
+        <button class="btn" onclick="loadElement('contact', false)">Contact</button>
+
+
+        <button onclick="openNav()" class="menu">Menu</button>
+
+        <div class="overlay" id="mobile-menu">
+            <button onclick="closeNav()" class="close">&times;</button>
+            <div class="overlay-content">
+                <button onclick="showNav('home')">Home</button>
+                <button onclick="showNav('about')">About</button>
+                <button onclick="showNav('projects')">Projects</button>
+                <button onclick="showNav('skills')">Skills</button>
+                <button onclick="showNav('contact')">Contact</button>
+            </div>
+        </div>
+
+    </header>
+</body>
+    
+</html>

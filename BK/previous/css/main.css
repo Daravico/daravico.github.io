@@ -1,0 +1,213 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;600&display=swap');
+
+:root{
+    /* ========= Colors ========= */
+
+    --background-color: #F6F6F6;
+    --header-color: #73939C;
+    
+    --dark-option: #535C5F;
+    --light-option: #DDDAD8;
+
+    --light-text: #DDDAD8;
+    --dark-text: #535C5F;
+    
+    --time-trans: 0.3s;
+    
+    --scale-variable: 1.2;
+    --size-variable: 0.9vmax;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    font-size: auto;
+    color: var(--text-color);
+}
+
+body{
+    background: var(--background-color);
+    color: var(--text-color); 
+}
+
+h1{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+}
+
+.header{
+    background: linear-gradient(to bottom, var(--header-color) 100%, transparent);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 7.5vh;
+    padding: 1vh 1vw;
+
+    /*NOT SELECTABLE*/
+    -webkit-touch-callout: none; 
+    -webkit-user-select: none;
+    -khtml-user-select: none; 
+    -moz-user-select: none; 
+    -ms-user-select: none; 
+    user-select: none;
+}
+
+/* ------------- Navbar logo ------------- */
+
+.header .logo img{
+    height: 5vh;
+    width: auto;
+    transition: all var(--time-trans);
+}
+
+.header .logo{
+    cursor: pointer;
+    transition: all var(--time-trans);
+    margin-right: auto;
+    padding: auto;
+}
+
+.header .logo:hover{
+    transform: scale(var(--scale-variable)); 
+    color: #DDDAD8;   
+}
+
+/* ------------- Navbar list ------------- */
+.header .navbar{
+    list-style: none;
+    order: 2;    
+}
+
+.header .navbar li{
+    font-size: 1.5vh;
+    display: inline-block;
+    padding: 1vmax 2vw;
+    border-radius: 2vh;
+    transition: all var(--time-trans);
+    color: var(--light-text);
+    font-weight: bold;
+    
+}
+
+.header .navbar li:hover{
+    background-color: var(--light-option);
+    color: var(--dark-text);    
+    transform: scale(1.1);  
+    cursor: pointer;
+}
+
+/* ------------- Navbar Button (Contact) ------------- */
+.header .btn,
+.menu{
+    order: 3;
+    margin-left: auto;
+    font-size: 2vh;
+    font-weight: bolder;
+    color: var(--dark-text);
+    background: var(--light-option);
+
+    border: none;
+    cursor: pointer;
+    border-radius: 1vh;
+    padding: 1vh 1vw;
+
+    transition: all var(--time-trans);
+    margin-left: 1vw;
+}
+
+.header .btn:hover,
+.menu:hover{
+    transform: scale(1.1);
+    color: var(--light-text);
+    background: var(--dark-option);
+}
+
+.individual-project
+{
+    width: 100%;
+    overflow: auto;
+    border-radius: 1vh;
+    border: 1px solid gray;
+}
+
+.individual-project div
+{
+    width: 50%;
+    height: 100%;
+    float: left;   
+}
+
+.individual-project-text
+{
+    justify-content: center;
+}
+
+.individual-project-image
+{
+    justify-content: center;
+}
+/* ###################### MOBILE ###################### */
+
+/* Nav */
+.header .overlay{
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    background-color: var(--dark-text);
+    opacity: 98%;
+    overflow: hidden;
+    transition: all var(--time-trans);
+}
+
+.header .overlay .overlay-content{
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.header .overlay button{
+    border-color: transparent;
+    background-color: transparent;
+    font-size: 100%;
+    padding: 2vh;
+    width: 50%;
+    display: block;
+    transition: all var(--time-trans) ease 0s;
+    color: var(--light-text);
+}
+
+.header .overlay .close{
+    font-size: 10vh;
+    position: absolute;
+    right: 1vh;
+    top: 1vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu{
+    display: none;
+}
+
+@media screen and (max-width: 900px){
+    .navbar, .btn{
+        display: none;
+    }
+    .navbar, .li{
+        display: none;
+    }
+
+    .menu{
+        display: inherit
+    }
+}
